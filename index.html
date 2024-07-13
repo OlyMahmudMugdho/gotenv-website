@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gotenv - Go Package for Loading Environment Variables From .env file</title>
+    <meta name="description" content="gotenv is a Go package that loads environment variables from a .env file into your application. Learn how to install and use it effectively.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>gotenv</h1>
+        <p>Load environment variables from a <code>.env</code> file into your Go application.</p>
+    </header>
+
+    <main>
+        <section id="installation">
+            <h2>Installation</h2>
+            <div class="code-block">
+                <pre><code>go get github.com/OlyMahmudMugdho/gotenv</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </section>
+
+        <section id="usage">
+            <h2>Usage</h2>
+            <ol>
+                <li>Create a <code>.env</code> file in the root of your project with the following content:
+                    <div class="code-block">
+                        <pre><code>KEY=value
+ANOTHER_KEY=another_value</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </li>
+                <li>In your Go application, import the package and load the environment variables:
+                    <div class="code-block">
+                        <pre><code>package main
+
+import (
+    "fmt"
+    "github.com/OlyMahmudMugdho/gotenv"
+    "os"
+)
+
+func main() {
+    gotenv.Load()
+
+    value := os.Getenv("KEY")
+    fmt.Println("KEY:", value)
+}</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </li>
+                <li>Run your application:
+                    <div class="code-block">
+                        <pre><code>go run main.go</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </li>
+            </ol>
+            <p>You should see the output:</p>
+            <div class="code-block">
+                <pre><code>KEY: value</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OlyMahmudMugdho</p>
+        <p><a href="https://olymahmud.netlify.app/">Website</a> | 
+           <a href="https://www.linkedin.com/in/m-oly-mahmud-mugdho/">LinkedIn</a> | 
+           <a href="https://www.facebook.com/Oly.Mahmud38/">Facebook</a> | 
+           <a href="https://github.com/OlyMahmudMugdho/gotenv">GitHub Repo</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
