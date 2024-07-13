@@ -1,82 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background: #007bff;
+    color: white;
     text-align: center;
+    padding: 1.5em 0;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
 }
 
 h2 {
-    color: #333;
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
+    color: #007bff;
 }
 
 .code-block {
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+    padding: 1em;
+    margin: 1em 0;
     position: relative;
-    margin-bottom: 1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 pre {
-    background: #f4f4f4;
-    border-left: 4px solid #333;
-    padding: 1rem;
-    overflow-x: auto;
+    margin: 0;
+    overflow: auto;
 }
 
-code {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-}
-
-.copy-btn {
+button.copy-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #333;
-    color: #fff;
+    right: 1em;
+    top: 1em;
+    background: #007bff;
+    color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1em;
     cursor: pointer;
-    font-size: 0.9rem;
+    border-radius: 4px;
 }
 
-.copy-btn:hover {
-    background: #555;
+button.copy-btn:hover {
+    background: #0056b3;
+}
+
+.env-highlight {
+    background-color: #ffd700;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    background: #007bff;
+    color: white;
+    padding: 1em 0;
+}
+
+footer p {
+    margin: 0.5em 0;
 }
 
 footer a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    margin: 0 0.5rem;
 }
 
 footer a:hover {

@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gotenv - Go Package for Loading Environment Variables From .env file</title>
     <meta name="description" content="gotenv is a Go package that loads environment variables from a .env file into your application. Learn how to install and use it effectively.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>gotenv</h1>
-        <p>Load environment variables from a <code>.env</code> file into your Go application.</p>
+    <header class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <h1 class="display-4">gotenv</h1>
+            <p class="lead">Load environment variables from a <code class="env-highlight">.env</code> file into your Go application.</p>
+        </div>
     </header>
 
-    <main>
-        <section id="installation">
-            <h2>Installation</h2>
-            <div class="code-block">
-                <pre><code>go get github.com/OlyMahmudMugdho/gotenv</code></pre>
-                <button class="copy-btn">Copy</button>
-            </div>
-        </section>
+    <main class="py-5">
+        <div class="container">
+            <section id="installation" class="mb-5">
+                <h2 class="h3 mb-3">Installation</h2>
+                <div class="code-block bg-light p-3 rounded">
+                    <pre><code>go get github.com/OlyMahmudMugdho/gotenv</code></pre>
+                    <button class="btn btn-primary btn-sm mt-2 copy-btn">Copy</button>
+                </div>
+            </section>
 
-        <section id="usage">
-            <h2>Usage</h2>
-            <ol>
-                <li>Create a <code>.env</code> file in the root of your project with the following content:
-                    <div class="code-block">
-                        <pre><code>KEY=value
+            <section id="usage">
+                <h2 class="h3 mb-3">Usage</h2>
+                <ol>
+                    <li class="mb-4">Create a <code class="env-highlight">.env</code> file in the root of your project with the following content:
+                        <div class="code-block bg-light p-3 rounded mt-2">
+                            <pre><code>KEY=value
 ANOTHER_KEY=another_value</code></pre>
-                        <button class="copy-btn">Copy</button>
-                    </div>
-                </li>
-                <li>In your Go application, import the package and load the environment variables:
-                    <div class="code-block">
-                        <pre><code>package main
+                            <button class="btn btn-primary btn-sm mt-2 copy-btn">Copy</button>
+                        </div>
+                    </li>
+                    <li class="mb-4">In your Go application, import the package and load the environment variables:
+                        <div class="code-block bg-light p-3 rounded mt-2">
+                            <pre><code>package main
 
 import (
     "fmt"
@@ -44,58 +51,49 @@ import (
 )
 
 func main() {
-    gotenv.Load() // By default, loads from .env file
+    // Load .env file
+    gotenv.Load()
+    
+    // Optional: Load a specific .env file
+    // gotenv.Load("path/to/your/.env")
 
     value := os.Getenv("KEY")
     fmt.Println("KEY:", value)
 }</code></pre>
-                        <button class="copy-btn">Copy</button>
-                    </div>
-                </li>
-                <li>Optionally, you can specify the path to a different .env file:
-                    <div class="code-block">
-                        <pre><code>package main
-
-import (
-    "fmt"
-    "github.com/OlyMahmudMugdho/gotenv"
-    "os"
-)
-
-func main() {
-    gotenv.Load("path/to/your/.env") // Loads from the specified .env file
-
-    value := os.Getenv("KEY")
-    fmt.Println("KEY:", value)
-}</code></pre>
-                        <button class="copy-btn">Copy</button>
-                    </div>
-                </li>
-                <li>Run your application:
-                    <div class="code-block">
-                        <pre><code>go run main.go</code></pre>
-                        <button class="copy-btn">Copy</button>
-                    </div>
-                </li>
-            </ol>
-            <p>You should see the output:</p>
-            <div class="code-block">
-                <pre><code>KEY: value</code></pre>
-                <button class="copy-btn">Copy</button>
-            </div>
-        </section>
+                            <button class="btn btn-primary btn-sm mt-2 copy-btn">Copy</button>
+                        </div>
+                    </li>
+                    <li>Run your application:
+                        <div class="code-block bg-light p-3 rounded mt-2">
+                            <pre><code>go run main.go</code></pre>
+                            <button class="btn btn-primary btn-sm mt-2 copy-btn">Copy</button>
+                        </div>
+                    </li>
+                </ol>
+                <p class="mt-4">You should see the output:</p>
+                <div class="code-block bg-light p-3 rounded">
+                    <pre><code>KEY: value</code></pre>
+                    <button class="btn btn-primary btn-sm mt-2 copy-btn">Copy</button>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 OlyMahmudMugdho</p>
-        <p>This project is licensed under the MIT License.</p>
-        <p>For more information, see the <a target="_blank" href="https://github.com/OlyMahmudMugdho/gotenv/blob/main/LICENSE">LICENSE</a> file.</p>
-        <p><a href="https://olymahmud.netlify.app/">Website</a> | 
-           <a href="https://www.linkedin.com/in/m-oly-mahmud-mugdho/">LinkedIn</a> | 
-           <a href="https://www.facebook.com/Oly.Mahmud38/">Facebook</a> | 
-           <a href="https://github.com/OlyMahmudMugdho/gotenv">GitHub Repo</a>
-        </p>
+    <footer class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 OlyMahmudMugdho</p>
+            <p>This project is licensed under the MIT License. For more information, see the <a class="text-white" target="_blank" href="https://github.com/OlyMahmudMugdho/gotenv/blob/main/LICENSE">LICENSE</a> file.</p>
+            <p><a class="text-white" href="https://olymahmud.netlify.app/">Website</a> | 
+               <a class="text-white" href="https://www.linkedin.com/in/m-oly-mahmud-mugdho/">LinkedIn</a> | 
+               <a class="text-white" href="https://www.facebook.com/Oly.Mahmud38/">Facebook</a> | 
+               <a class="text-white" href="https://github.com/OlyMahmudMugdho/gotenv">GitHub Repo</a>
+            </p>
+        </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
