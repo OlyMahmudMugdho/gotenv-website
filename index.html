@@ -44,7 +44,26 @@ import (
 )
 
 func main() {
-    gotenv.Load()
+    gotenv.Load() // By default, loads from .env file
+
+    value := os.Getenv("KEY")
+    fmt.Println("KEY:", value)
+}</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </li>
+                <li>Optionally, you can specify the path to a different .env file:
+                    <div class="code-block">
+                        <pre><code>package main
+
+import (
+    "fmt"
+    "github.com/OlyMahmudMugdho/gotenv"
+    "os"
+)
+
+func main() {
+    gotenv.Load("path/to/your/.env") // Loads from the specified .env file
 
     value := os.Getenv("KEY")
     fmt.Println("KEY:", value)
@@ -70,7 +89,7 @@ func main() {
     <footer>
         <p>&copy; 2024 OlyMahmudMugdho</p>
         <p>This project is licensed under the MIT License.</p>
-        <p>For more information, see the<a target="_blank" href="https://github.com/OlyMahmudMugdho/gotenv/blob/main/LICENSE">LICENSE</a>file.</p>
+        <p>For more information, see the <a target="_blank" href="https://github.com/OlyMahmudMugdho/gotenv/blob/main/LICENSE">LICENSE</a> file.</p>
         <p><a href="https://olymahmud.netlify.app/">Website</a> | 
            <a href="https://www.linkedin.com/in/m-oly-mahmud-mugdho/">LinkedIn</a> | 
            <a href="https://www.facebook.com/Oly.Mahmud38/">Facebook</a> | 
